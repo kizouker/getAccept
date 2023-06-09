@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Code Test for getAccept fullstack position 2023-06",
+  "main": ".eslintrc.js",
+  "type": "module",
+  "scripts": {
+    "test": "jasmine",
+    "start": "node ./src/server.js",
+    "lint": "eslint --fix './**/*.js'",
+    "prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kizouker/getAccept.git"
+  },
+  "keywords": [
+    "fullstack",
+    "react",
+    "node",
+    "getaccept"
+  ],
+  "author": "Rickard Åberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kizouker/getAccept/issues"
+  },
+  "homepage": "https://github.com/kizouker/getAccept#readme",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}
