@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      -run:
+      - run:
           name: Run Jasmine tests
           command: npm test
 # Orchestrate jobs using workflows
