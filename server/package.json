@@ -5,7 +5,7 @@
   "main": ".eslintrc.js",
   "type": "module",
   "scripts": {
-    "test": "jasmine",
+    "test": "karma start ./karma.conf.cjs",
     "start": "node ./src/server.js",
     "lint": "eslint --fix './**/*.js'",
     "prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
