@@ -21,13 +21,13 @@ const BowlingGame = () => {
       <PinsDown></PinsDown>
 
       <div className="container1">
-        {Array.from({length : frames.length + 1 }).map((_, index) => (
-          <Frame frame={index} roll1={currentFrame[0]!== null }   
-       >
+        {Array.from({ length: frames.length }).map((_, index) => (
+          <Frame frame={index} roll1={currentFrame[0] !== null}
+          >
             {index}
           </Frame>
         ))}
-    
+
       </div>
 
       {/* <div className="container2">
