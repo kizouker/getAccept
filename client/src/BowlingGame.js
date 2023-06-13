@@ -1,63 +1,50 @@
 import React from 'react';
 import Frame from './Frame.js';
 import Score from './Score.js';
+import PinsDown from './PinsDown.js';
+import { useSelector } from 'react-redux';
+import BowlingSlice from './BowlingSlice.js';
 
+/**
+ * 
+ * TODO: change generated FRAme loop
+ */
 
-class BowlingGame extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      frames: Array(10).fill({ first: null, second: null, score: null }),
-      handicap: 0,
-      maxScore: 300,
-    };
-  }
+const BowlingGame = () => {
 
-  handleChange = (event, frameIndex, rollIndex) => {
-    const { frames } = this.state;
-    const { value } = event.target;
-    const newFrames = [...frames];
-    newFrames[frameIndex][rollIndex] = parseInt(value) || null;
-    this.setState({ frames: newFrames });
-  };
+  const frames = useSelector((state) => state.bowling.frames);
+  const currentFrame = useSelector((state) => state.bowling.currentFrame);
+  const currentRoll = useSelector((state) => state.bowling.currentRoll);
 
-  render() {
-    const { frames, handicap, maxScore } = this.state;
-
-    return (<div>
-
+  return (
+    <div>
+      <PinsDown></PinsDown>
 
       <div className="container1">
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-        <Frame></Frame>
-      </div>
-      <div className="container2">
-        <Score></Score>
-        <Score></Score>
+        {Array.from({length : frames.length + 1 }).map((_, index) => (
+          <Frame frame={index} roll1={currentFrame[0]!== null }   
+       >
+            {index}
+          </Frame>
+        ))}
+    
       </div>
 
-      {/* <div className="box"> Frame 1</div>
-        <div className="box"> Frame 2</div>
-        <div className="box"> Frame 3</div>
-        <div className="box"> Frame 4</div>
-        <div className="box"> Frame 5</div>
-        <div className="box"> Frame 6</div>
-        <div className="box"> Frame 7</div>
-        <div className="box"> Frame 8</div>
-        <div className="box"> Frame 9</div>
-        <div className="box"> Frame 10</div> */}
-
+      {/* <div className="container2">
+        <Score></Score>
+        <Score></Score>
+      </div> */}
     </div>
 
-    );
-  }
+  );
 }
 export default BowlingGame;
+
+/**
+ * can I update the score?
+ * 
+ * Can I update the frame triggering it from PinsDown and using redux to keep the state
+ * Use selectors to get the info???
+ * 
+ * yes
+ */
