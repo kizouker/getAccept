@@ -2,10 +2,8 @@ import '../css/Frame.css';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Frame = (props) => {
+const Frame = ({ frame }) => {
   const frames = useSelector((state) => state.bowling.frames);
-  const { frame } = props.frame;
-
   const currentFrame = frames[frame];
 
   let roll1, roll2, roll3;
@@ -44,7 +42,7 @@ const Frame = (props) => {
   return (
     <div className="container">
       <div className="box" id="frame">
-        {props.frame + 1}
+        {frame + 1}
       </div>
       <div className="box" id="rollOne">
         {roll1}
@@ -81,5 +79,5 @@ function isStrike(roll1) {
  */
 
 Frame.propTypes = {
-  frame: PropTypes.string.isRequired
+  frame: PropTypes.number.isRequired
 };

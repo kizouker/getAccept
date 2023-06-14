@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Code Test for getAccept fullstack position 2023-06",
   "main": ".eslintrc.js",
-  "type": "module",
+
   "scripts": {
     "test": "cypress open",
     "start": "node ./src/server.js",
