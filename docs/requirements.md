@@ -14,7 +14,7 @@ NFI1: I use redux to manage state in the frontend; pair:
 
 
 NFR2. The application shall be written with "clean code" in mind
-I2.
+I2. Check. 
 
 R3. Good naming of functions and variables
 I3:

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const Score = () => {
   const [data, setData] = useState(null);
-
+  const frames = useSelector((state) => state.bowling.frames);
   useEffect(() => {
     async function fetchDataAsync() {
       const resolvedData = await calcOnServer(frames);
@@ -13,24 +13,21 @@ const Score = () => {
       setData(resolvedData);
     }
     fetchDataAsync();
-  }, []);
+  }, [frames]);
 
-  const frames = useSelector((state) => state.bowling.frames);
+  let totalScore = data ? data.totalScore : null;
+  let maxScore = data ? data.maxScore : null;
 
-  console.log('Score, frames before', frames);
-  let totalSum = data ? data.totalSum : null;
-  let currentSum = data ? data.currentSum : null;
-
-  console.log('server sent, totalSum: ', totalSum);
-  console.log('server sent, currentSum: ', currentSum);
+  console.log('server sent, totalScore: ', totalScore);
+  console.log('server sent, currentSum: ', maxScore);
 
   return (
     <div className="container2">
       <div className="box" id="hsum">
-        hsum: {totalSum}
+        totalScore: {totalScore}
       </div>
       <div className="box" id="maxSum">
-        maxSum: {currentSum}
+        maxScore: {maxScore}
       </div>
     </div>
   );
