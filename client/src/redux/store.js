@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import bowlingReducer from './BowlingSlice.js';
 
-export const Store = configureStore({
+export const store = configureStore({
   reducer: {
-    bowling: bowlingReducer,
-  },
+    bowling: bowlingReducer
+  }
 });

@@ -1,0 +1,26 @@
+.container2 {
+  display: grid;
+  grid-template-columns: 43px;
+  grid-template-rows: 43px;
+  grid-template-areas:
+    'hs hs'
+    'ms ms';
+  grid-gap: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: auto;
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+}
+
+#hsum {
+  grid-area: hs;
+}
+
+#maxSum {
+  grid-area: ms;
+}

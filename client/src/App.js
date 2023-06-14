@@ -1,9 +1,9 @@
 import logo from './logo.svg';
-import './App.css';
-import BowlingGame from './BowlingGame.js';
+import './css/App.css';
+import BowlingGame from './components/BowlingGame.js';
 import { useState } from 'react';
 import { Provider } from 'react-redux';
-import { Store } from './Store.js';
+import { store } from './redux/store.js';
 
 const App = () => {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -12,16 +12,11 @@ const App = () => {
     setIsSpinning((prevState) => !prevState);
   };
 
-
   return (
-    <Provider store={Store}>
+    <Provider store={store}>
       <div className="App">
         <header className="App-header">
-          <img
-            src={logo}
-            className={`App-logo ${isSpinning ? 'spin' : ''}`}
-            alt="logo"
-          />
+          <img src={logo} className={`App-logo ${isSpinning ? 'spin' : ''}`} alt="logo" />
           <button onClick={toggleSpin}>Toggle Spin</button>
         </header>
 
@@ -29,12 +24,7 @@ const App = () => {
           <BowlingGame></BowlingGame>
         </div>
 
-
-        <footer className="App-footer">
-          footer: Rickard Åberg
-        </footer>
-
-
+        <div className="App-footer">footer: Rickard Åberg</div>
       </div>
     </Provider>
   );
