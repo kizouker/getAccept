@@ -13,8 +13,7 @@ app.post(URL, (req, res) => {
   console.log('Serving your request...');
 
   const frames = req.body.frames;
-  res.json({ frames, message: 'Frames received successfully' });
-  console.log("server-responds:", frames);
+  res.json({ totalSum : '10', currentSum: '2', message: 'Frames received successfully' });
 
 });
 
