@@ -89,3 +89,5 @@ jasmine
 
 
 
+curl -X POST -H "Content-Type: application/json" -d '{"frames":["frame1","frame2","frame3"]}' http://localhost:4000/calcscore/post/
+

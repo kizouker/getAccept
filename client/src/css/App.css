@@ -33,13 +33,15 @@ App-body {
   align-items: center;
   justify-content: center;
   font-size: calc(1px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .frameContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #282c34;
+  color: white;
 }
 
 .spin {

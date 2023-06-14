@@ -24,12 +24,3 @@ const BowlingGame = () => {
   );
 };
 export default BowlingGame;
-
-/**
- * can I update the score?
- *
- * Can I update the frame triggering it from PinsDown and using redux to keep the state
- * Use selectors to get the info???
- *
- * yes
- */

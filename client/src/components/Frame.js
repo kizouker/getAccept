@@ -25,20 +25,6 @@ const Frame = ({ frame }) => {
     roll1 = '-';
   }
 
-  // if (currentFrame !== null && currentFrame !== undefined && currentFrame[1] !== null) {
-  //   roll2 = currentFrame[1];
-  // } else {
-  //   roll2 = "-";
-  // }
-
-  if (currentFrame !== null && currentFrame !== undefined && currentFrame[1] !== null) {
-    roll3 = currentFrame[1];
-  } else {
-    roll3 = '-';
-  }
-  // spare roll1+roll2 === 10 "/"
-  // strike roll1 ===10 "X"
-
   return (
     <div className="container">
       <div className="box" id="frame">
@@ -60,10 +46,6 @@ const Frame = ({ frame }) => {
   );
 };
 
-/**
- * special case roll3 for the last frame
- */
-
 export default Frame;
 
 function isSpare(roll1, roll2) {
@@ -73,10 +55,6 @@ function isSpare(roll1, roll2) {
 function isStrike(roll1) {
   return roll1 === 10;
 }
-/***
- *
- * GOOD work: from the frontend course at udacotuy last authum - it paid off!
- */
 
 Frame.propTypes = {
   frame: PropTypes.number.isRequired

@@ -10,7 +10,7 @@
   padding-left: 2px;
   padding-right: 2px;
   margin: auto;
-  border: 1px solid red;
+  border: 1px solid grey;
   width: 100%;
 }
 .container1 {
@@ -25,7 +25,7 @@
 }
 .box {
   background-color: #444;
-  border: 1px solid red;
+  border: 1px solid black;
 }
 
 #frame {

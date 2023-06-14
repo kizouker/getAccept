@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateFrame } from '../redux/BowlingSlice.js';
+import '../css/PinsDown.css';
 
 const PinsDown = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const PinsDown = () => {
   //remanaing pins is the length of array+1, and map, itterates over every element in the array
   //for each element creates a button
   return (
-    <div>
+    <div className="pinsDown">
       {Array.from({ length: remainingPins + 1 }).map((_, index) => (
         <button key={index} onClick={() => handleClick(index)}>
           {index}

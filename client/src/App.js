@@ -23,8 +23,6 @@ const App = () => {
         <div className="App-body">
           <BowlingGame></BowlingGame>
         </div>
-
-        <div className="App-footer">footer: Rickard Åberg</div>
       </div>
     </Provider>
   );
