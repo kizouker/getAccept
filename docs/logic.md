@@ -151,3 +151,13 @@ updates "Rickard Åberg : hcp: 5"
 
 FR4. Proper interfaces and types (frontend and backend)
 Q=?
+
+##
+data
+frame, consists of roll1 and roll2, this is also the score of roll1 and roll2
+currentScore
+totalScore
+maxScore
+
+data is from the server...
+

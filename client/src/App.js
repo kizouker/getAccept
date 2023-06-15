@@ -3,7 +3,7 @@ import './css/App.css';
 import BowlingGame from './components/BowlingGame.js';
 import { useState } from 'react';
 import { Provider } from 'react-redux';
-import { store } from './redux/store.js';
+import store from './redux/store.js';
 
 const App = () => {
   const [isSpinning, setIsSpinning] = useState(false);

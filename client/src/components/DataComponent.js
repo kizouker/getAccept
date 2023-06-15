@@ -23,7 +23,8 @@ const DataComponent = () => {
   return (
     <div>
       <h1>Data</h1>
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+      {data}
+      {/* // &&<pre>{JSON.stringify(data, null, 2)}</pre> */}
     </div>
   );
 };
