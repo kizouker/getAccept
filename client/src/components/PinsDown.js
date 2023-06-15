@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateFrame } from '../redux/BowlingSlice.js';
+import { updateFrame } from '../redux/bowlingSlice.js';
 import '../css/PinsDown.css';
 
 const PinsDown = () => {

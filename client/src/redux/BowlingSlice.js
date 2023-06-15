@@ -5,7 +5,10 @@ const bowlingSlice = createSlice({
   initialState: {
     frames: Array(10).fill([null, null]),
     currentFrame: 0,
-    currentRoll: 0
+    currentRoll: 0,
+    currentScore: 0,
+    totalScore: 0,
+    maxScore: 0
   },
   reducers: {
     updateFrame: (state, action) => {

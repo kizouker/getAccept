@@ -3,6 +3,7 @@ import Frame from './Frame.js';
 import Score from './Score.js';
 import PinsDown from './PinsDown.js';
 import { useSelector } from 'react-redux';
+import DataComponent from './DataComponent.js';
 
 const BowlingGame = () => {
   const frames = useSelector((state) => state.bowling.frames);
@@ -13,12 +14,13 @@ const BowlingGame = () => {
 
       <div className="frameContainer">
         {Array.from({ length: frames.length }).map((_, index) => (
-          <Frame key={index} frame={index}>
+          <Frame key={index} frameIndex={index}>
             {index}
           </Frame>
         ))}
 
         <Score></Score>
+        <DataComponent></DataComponent>
       </div>
     </div>
   );

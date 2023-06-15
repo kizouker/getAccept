@@ -1,10 +1,27 @@
 import '../css/Frame.css';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import calcOnServer from '../Api-helper.js';
 
-const Frame = ({ frame }) => {
+const Frame = ({ frameIndex }) => {
   const frames = useSelector((state) => state.bowling.frames);
-  const currentFrame = frames[frame];
+  const currentFrame = frames[frameIndex];
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchDataAsync() {
+      const resolvedData = await calcOnServer(frames, frameIndex);
+      console.log('resolveddata', resolvedData);
+      setData(resolvedData);
+    }
+    fetchDataAsync();
+  }, [frames]);
+
+  let currentSum = data ? data.currentSum : null;
+  console.log('currentSum: ', currentSum);
+
+  const currentSum2 = currentSum;
 
   let roll1, roll2, roll3;
 
@@ -28,7 +45,7 @@ const Frame = ({ frame }) => {
   return (
     <div className="container">
       <div className="box" id="frame">
-        {frame + 1}
+        {frameIndex + 1}
       </div>
       <div className="box" id="rollOne">
         {roll1}
@@ -39,8 +56,8 @@ const Frame = ({ frame }) => {
       <div className="box" id="rollThree">
         {roll3}
       </div>
-      <div className="box" id="sum">
-        sum
+      <div className="box" id="currentSum">
+        {currentSum2}
       </div>
     </div>
   );
@@ -57,5 +74,5 @@ function isStrike(roll1) {
 }
 
 Frame.propTypes = {
-  frame: PropTypes.number.isRequired
+  frameIndex: PropTypes.number.isRequired
 };
