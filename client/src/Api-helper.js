@@ -1,10 +1,9 @@
-const SERVER_PORT = process.env.port || 4000;
-const URL = `http://localhost:${SERVER_PORT}/calcscore/post/`;
+import { URL_POST_CALC_TOTALSCORE } from './constants.mjs';
 
 const calcOnServer = async (frames) => {
   console.log('frames: ', frames);
   try {
-    const response = await fetch(URL, {
+    const response = await fetch(URL_POST_CALC_TOTALSCORE, {
       method: 'POST',
       body: JSON.stringify({
         title: 'Bowling calculator',

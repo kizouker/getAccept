@@ -3,23 +3,24 @@
 ### Priority A - skallkrav
 ### FR1: Backend/server - 
   - debug calcTotalScore
-  - Estimate: 8-12 hours
+  - Estimate: 8-12 hours (***)
   - [10,null] [8,2] [3,4] gives 38 but should be 40
 ## TODO (Not started)
 ### Priority A - "Skall-krav"
 * Last frame has three rolls  
-  -  Estimate: 2-6 hours
+  -  Estimate: 2-6 hours (***)
 
 ### BUGS
  * when strike, roll1===10 => pins should sho nothing, now it shows 0  
 - Estimate : 1-2 hours
+* common constants = exception for prettier
+
 
 ## DONE
 ### Tests in jest
 - Priority: A - "skall-krav"
  * 4 tests at the moment
  * Use ecma modules (es6+) https://jestjs.io/docs/ecmascript-modules
-      - Estimate: 4 hours
 - DONE
 
 ### NFR3. Good naming of functions and variables
@@ -32,10 +33,7 @@
   * Write README.md // installation instructions
 
 
-
-
 ##  IMPEDIMENT -  Questions
-
 #### FR4. Proper interfaces and types (frontend and backend)
 * IFR3:  
     - Interfaces 
@@ -58,8 +56,6 @@
     * maxScore
     * totalScore
   - Estimate: 2-4 hours (***)
-
-
 ### Priority B - Nice to have 
 ### Frontend/client  
 * CSS
@@ -84,3 +80,5 @@
 ### NFR4. Well designed(short and precise) functions
 * I4: Will have go through this again to see that functions haven't become to large.
 - Priority B: Estimate: 1-4 hours (***)
+
+### FR? : MaxScore?

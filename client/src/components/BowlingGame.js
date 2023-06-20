@@ -18,7 +18,6 @@ const BowlingGame = () => {
           </Frame>
         ))}
         <Score></Score>
-        {/* <ScoreBoard></ScoreBoard> */}
       </div>
     </div>
   );

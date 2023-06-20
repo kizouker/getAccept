@@ -22,8 +22,8 @@ const Score = () => {
   console.log('totalScore: ', totalScore);
   console.log('currentSum: ', maxScore);
 
-  totalScore = 'N/A';
-  maxScore = 'N/A';
+  // totalScore = 'N/A';
+  // maxScore = 'N/A';
 
   return (
     <div className="container2">
