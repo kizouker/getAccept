@@ -10,7 +10,7 @@
     "start": "nodemon ./src/server.js",
     "debug": "node --inspect ./src/server.js",
     "lint": "eslint --fix './**/*.js'",
-    "prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
+    "format": "prettier --config .prettierrc 'src/**/*.js' --write"
   },
   "jest": {
     "globals": {
