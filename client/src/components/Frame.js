@@ -1,28 +1,11 @@
 import '../css/Frame.css';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import calcOnServer from '../Api-helper.js';
 
 const Frame = ({ frameIndex }) => {
   const frames = useSelector((state) => state.bowling.frames);
   const currentFrame = frames[frameIndex];
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    async function fetchDataAsync() {
-      const resolvedData = await calcOnServer(frames, frameIndex);
-      console.log('resolveddata', resolvedData);
-      setData(resolvedData);
-    }
-    fetchDataAsync();
-  }, [frames]);
-
-  let currentSum = data ? data.currentSum : null;
-  console.log('currentSum: ', currentSum);
-
-  const currentSum2 = currentSum;
-
   let roll1, roll2, roll3;
 
   if (currentFrame !== null && currentFrame !== undefined && currentFrame[0] !== null) {
@@ -55,9 +38,6 @@ const Frame = ({ frameIndex }) => {
       </div>
       <div className="box" id="rollThree">
         {roll3}
-      </div>
-      <div className="box" id="currentSum">
-        {currentSum2}
       </div>
     </div>
   );

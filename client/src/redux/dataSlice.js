@@ -1,12 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const SERVER_PORT = process.env.port || 4000;
-const URL = `http://localhost:${SERVER_PORT}/calcscore/post/`;
+export const fetchHttpPost = createAsyncThunk('data/fetch', async (requestData) => {
+  const response = await fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(requestData)
+  });
 
-// Async thunk action creator
-export const fetchData = createAsyncThunk('data/fetch', async () => {
-  const response = await fetch(URL);
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
   const data = await response.json();
+  console.log('asyncthunk-data:', data);
   return data;
 });
 
@@ -21,15 +29,15 @@ const dataSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchData.pending, (state) => {
+      .addCase(fetchHttpPost.pending, (state) => {
         state.loading = true;
       })
-      .addCase(fetchData.fulfilled, (state, action) => {
+      .addCase(fetchHttpPost.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload;
         state.error = null;
       })
-      .addCase(fetchData.rejected, (state, action) => {
+      .addCase(fetchHttpPost.rejected, (state, action) => {
         state.loading = false;
         state.data = null;
         state.error = action.error.message;

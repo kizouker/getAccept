@@ -1,9 +1,8 @@
 import React from 'react';
 import Frame from './Frame.js';
-import Score from './Score.js';
 import PinsDown from './PinsDown.js';
 import { useSelector } from 'react-redux';
-import DataComponent from './DataComponent.js';
+import Score from './Score.js';
 
 const BowlingGame = () => {
   const frames = useSelector((state) => state.bowling.frames);
@@ -18,9 +17,8 @@ const BowlingGame = () => {
             {index}
           </Frame>
         ))}
-
         <Score></Score>
-        <DataComponent></DataComponent>
+        {/* <ScoreBoard></ScoreBoard> */}
       </div>
     </div>
   );
