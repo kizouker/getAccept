@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 const Frame = ({ frameIndex }) => {
   const frames = useSelector((state) => state.bowling.frames);
   const currentFrame = frames[frameIndex];
-  let roll1, roll2, roll3;
+  let roll1, roll2;
+  // roll3;
 
   if (currentFrame !== null && currentFrame !== undefined && currentFrame[0] !== null) {
     roll1 = currentFrame[0];
@@ -36,9 +37,9 @@ const Frame = ({ frameIndex }) => {
       <div className="box" id="rollTwo">
         {roll2}
       </div>
-      <div className="box" id="rollThree">
+      {/* <div className="box" id="rollThree">
         {roll3}
-      </div>
+      </div> */}
     </div>
   );
 };
