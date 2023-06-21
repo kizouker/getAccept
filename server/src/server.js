@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { SERVER_PORT, ROUTE_POST_CALC_TOTALSCORE } from './constants.mjs'
+import { SERVER_PORT, ROUTE_POST_CALC_TOTALSCORE } from './constants.mjs';
 import { calculateTotalScore } from '../src/calcTotalScore.js';
 const app = express();
 
@@ -18,7 +18,6 @@ app.post(ROUTE_POST_CALC_TOTALSCORE, (req, res) => {
     frames: frames,
   });
 });
-
 
 // Start the server
 export const server = app.listen(SERVER_PORT, () => {
