@@ -1,10 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import {
-  SERVER_PORT,
-  URL_POST_CALC_TOTALSCORE,
-  ROUTE_POST_CALC_TOTALSCORE
-} from './constants.mjs'
+import { SERVER_PORT, ROUTE_POST_CALC_TOTALSCORE } from './constants.mjs'
 import { calculateTotalScore } from '../src/calcTotalScore.js';
 const app = express();
 

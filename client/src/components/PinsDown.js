@@ -26,7 +26,7 @@ const PinsDown = () => {
   // Generate 10 buttons, the number of it representing the value of the pins you broke down
   // in the first round, and the generate a list of buttons with values representing what pins are left for the second
 
-  //remanaing pins is the length of array+1, and map, itterates over every element in the array
+  //remaining pins is the length of array+1, and map, itterates over every element in the array
   //for each element creates a button
   return (
     <div className="pinsDown">

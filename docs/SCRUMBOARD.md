@@ -1,14 +1,18 @@
 # SCRUM BOARD
 ## IN PROGRESS 
 ### Priority A - skallkrav
-### FR1: Backend/server - 
-  - debug calcTotalScore
-  - Estimate: 8-12 hours (***)
-  - [10,null] [8,2] [3,4] gives 38 but should be 40
+
 ## TODO (Not started)
 ### Priority A - "Skall-krav"
 * Last frame has three rolls  
-  -  Estimate: 2-6 hours (***)
+  -  Estimate: 2-8 hours (***)
+
+### FR? : MaxScore?
+- Estimate 4 hours
+### Update running score in the frame
+- Estimate 4 hours
+
+Total: 16 hours left
 
 ### BUGS
  * when strike, roll1===10 => pins should sho nothing, now it shows 0  
@@ -17,27 +21,39 @@
 
 
 ## DONE
+
+### FR1: Backend/server - 
+  - debug calcTotalScore
+  - Estimate: 8-12 hours (***) ; Actual: 4 hours
+  - [10,null] [8,2] [3,4] gives 38 but should be 40
+DONE
 ### Tests in jest
 - Priority: A - "skall-krav"
- * 4 tests at the moment
+ * 4 tests at the moment 
+ * Create additonal tests - 7+ DONE
  * Use ecma modules (es6+) https://jestjs.io/docs/ecmascript-modules
 - DONE
 
 ### NFR3. Good naming of functions and variables
 * I3. Good is a term of subjective meaning :) but I have tried. Will go this trough again ***
+- Priority B: Estimate: 0.5 hours (***)
+DONE
 
 ### NFR4. Well designed(short and precise) functions
 * I4: Will have go through this again to see that functions haven't become to large.
+- Priority B: Estimate: 0.5 hours (***)
+DONE
+
 
 ### Misc
   * Write README.md // installation instructions
-
+DONE
 
 ##  IMPEDIMENT -  Questions
 #### FR4. Proper interfaces and types (frontend and backend)
 * IFR3:  
     - Interfaces 
-    Language dependent or do you mean "REST API as a interface?"
+    Language dependent 
     - Types
     Not so much typing in javascript...
     
@@ -68,17 +84,3 @@
 - use more headers (cors, etc)
 - Priority: B - nice to have
        
-### Tests in jest
-- Priority: B - nice to have
-  * Create more tests:
-    - Estimate: 2-4 hours
-
-### NFR3. Good naming of functions and variables
-* I3. Good is a term of subjective meaning :) but I have tried. Will go this trough again ***
-- Priority B: Estimate: 1-2 hours (***)
-
-### NFR4. Well designed(short and precise) functions
-* I4: Will have go through this again to see that functions haven't become to large.
-- Priority B: Estimate: 1-4 hours (***)
-
-### FR? : MaxScore?
