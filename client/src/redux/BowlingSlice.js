@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const bowlingSlice = createSlice({
+export const bowlingSlice = createSlice({
   name: 'bowling',
   initialState: {
     frames: Array.from({ length: 10 }, () => [null, null]),

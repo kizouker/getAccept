@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import bowlingReducer from './bowlingSlice.js';
+import bowlingReducer from './BowlingSlice.js';
 
 const rootReducer = combineReducers({
   bowling: bowlingReducer
