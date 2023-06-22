@@ -1,6 +1,10 @@
 // import { calculateTotalScore } from '../src/calcTotalScore.js';
 // import { calculateTotalScore } from '../src/calcTotalScoreLastFrame.js';
-import { calculateTotalScore } from '../src/calcTotScoreRec.js';
+import { calculateTotalScore } from '../src/calcTotScoreRec.js';// is working as expected
+// import { calculateTotalScore } from '../src/calcRec2.js';  perfect score is wrong
+//  import { calculateTotalScore } from '../src/calcRec1.js';
+
+
 test('calculates score correctly when no strikes or spares', () => {
   const frames = [
     [8, 0],

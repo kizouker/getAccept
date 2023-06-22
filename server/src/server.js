@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { SERVER_PORT, ROUTE_POST_CALC_TOTALSCORE } from './constants.mjs';
-import { calculateTotalScore } from '../src/calcTotalScore.js';
+import { calculateTotalScore } from '../src/calcTotScoreRec.js';
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
