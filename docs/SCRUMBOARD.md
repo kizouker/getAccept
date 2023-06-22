@@ -14,6 +14,12 @@
 
 Total: 16 hours left
 
+## constants.js common for both server and client
+
+
+## error handling if server is unavailable
+
+
 ### BUGS
  * when strike, roll1===10 => pins should sho nothing, now it shows 0  
 - Estimate : 1-2 hours

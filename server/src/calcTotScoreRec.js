@@ -12,20 +12,10 @@ export function calculateTotalScore(frames) {
     return sumNonNullValues(currentFrame);
   }
 
-  // if (isStrike) {
-  //   const [nextFrame = [], frameAfterNext = []] = remainingFrames;
-  //   const strikeBonus =
-  //   (nextFrame[0] || 0) +
-  //     (nextFrame[1] !== null ? nextFrame[1] : (frameAfterNext[0] || 0));
-  //   return 10 + strikeBonus + calculateTotalScore(remainingFrames);
-  // }
-
-  if (isStrike) {
+    if (isStrike) {
     const [nextFrame = [], frameAfterNext = []] = remainingFrames;
     const firstBonusRoll = nextFrame[0] || 0;
     const isNextFrameStrike = nextFrame[1] === null
-    // const isNextFrameStrike = ((nextFrame[0] === 10) &&(nextFrame[1] === null))
-    // const isNextFrameStrike = ((nextFrame[0] === 10))
     const secondBonusRoll = isNextFrameStrike ? (frameAfterNext[0] || 0) : (nextFrame[1] || 0);
     const strikeBonus = firstBonusRoll + secondBonusRoll;
     return 10 + strikeBonus + calculateTotalScore(remainingFrames);
