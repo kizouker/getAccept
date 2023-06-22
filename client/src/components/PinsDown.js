@@ -11,7 +11,6 @@ const PinsDown = () => {
 
   const handleClick = (pins) => {
     dispatch(updateFrame({ currentRoll, pins }));
-    //special case when we take all 10 pins, on the first roll => strike
 
     if (currentFrame === 9) {
       setCurrentRoll(currentRoll < 2 ? currentRoll + 1 : 0);
@@ -27,11 +26,7 @@ const PinsDown = () => {
       }
     }
   };
-  // Generate 10 buttons, the number of it representing the value of the pins you broke down
-  // in the first round, and the generate a list of buttons with values representing what pins are left for the second
 
-  //remaining pins is the length of array+1, and map, itterates over every element in the array
-  //for each element creates a button
   return (
     <div className="pinsDown">
       {Array.from({ length: remainingPins + 1 }).map((_, index) => (
