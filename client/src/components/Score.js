@@ -22,12 +22,21 @@ const Score = () => {
   console.log('totalScore: ', totalScore);
 
   return (
-    <div className="container2">
-      <div className="box" id="hsum">
-        totalScore: {totalScore}
+    <div className="score">
+      <div className="box" id="headLine">
+        ScoreTable
       </div>
-      <div className="box" id="maxSum">
-        maxScore: {maxScore}
+      <div className="box" id="totalScoreHeader">
+        totalScore:
+      </div>
+      <div className="box" id="totalScore">
+        {totalScore}
+      </div>
+      <div className="box" id="maxScoreHeader">
+        maxScore:
+      </div>
+      <div className="box" id="maxScore">
+        {maxScore}
       </div>
     </div>
   );

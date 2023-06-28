@@ -28,7 +28,7 @@ const Frame = ({ frameIndex }) => {
   }
 
   return (
-    <div className="container">
+    <div className="frame">
       <div className="box" id="frame">
         {frameIndex + 1}
       </div>
@@ -43,6 +43,9 @@ const Frame = ({ frameIndex }) => {
           {roll3}
         </div>
       )}
+      <div className="box" id="frameScore">
+        frameScore
+      </div>
     </div>
   );
 };

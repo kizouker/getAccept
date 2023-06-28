@@ -1,27 +1,17 @@
-.container {
+.frame {
   display: grid;
-  grid-template-columns: 15px 15px 15px;
-  grid-template-rows: 15px 15px 15px;
+  grid-template-columns: repeat(2,1fr); 
+  grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-    'fr fr fr fr'
-    'r1 r1 r2 r2'
-    'sm sm sm sm';
-  grid-gap: 5px;
-  padding-left: 2px;
-  padding-right: 2px;
-  margin: auto;
+    'fr fr'
+    'r1 r2'
+    'fs fs';
+  grid-gap: 0.2rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  margin: 0.2rem;
   border: 1px solid grey;
   width: 100%;
-}
-.container1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.container2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .box {
   background-color: #444;
@@ -40,6 +30,6 @@
   grid-area: r2;
 }
 
-#currentSum {
-  grid-area: sm;
+#frameScore {
+  grid-area: fs;
 }

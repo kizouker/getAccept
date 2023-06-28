@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateFrame } from '../redux/BowlingSlice.js';
+import { updateFrame, updateFrameScores } from '../redux/BowlingSlice.js';
 import '../css/PinsDown.css';
 
 const PinsDown = () => {
   const dispatch = useDispatch();
   const [remainingPins, setRemainingPins] = useState(10);
-  const [currentFrame, setCurrentFrame] = useState(0);
+  const [frameIndex, setFrameIndex] = useState(0);
   const [currentRoll, setCurrentRoll] = useState(0);
 
   const handleClick = (pins) => {
     dispatch(updateFrame({ currentRoll, pins }));
+    dispatch(updateFrameScores());
 
-    if (currentFrame === 9) {
+    if (frameIndex === 9) {
       setCurrentRoll(currentRoll < 2 ? currentRoll + 1 : 0);
       setRemainingPins(10);
     } else {
       if (pins === 10 || currentRoll === 1) {
-        setCurrentFrame(currentFrame + 1);
+        setFrameIndex(frameIndex + 1);
         setCurrentRoll(0);
         setRemainingPins(10);
       } else {

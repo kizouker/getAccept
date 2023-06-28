@@ -1,26 +1,43 @@
-.container2 {
+.score {
   display: grid;
-  grid-template-columns: 43px;
-  grid-template-rows: 43px;
+  grid-template-columns: repeat(2, fr);
+  grid-template-rows: repeat(3, fr);
   grid-template-areas:
-    'hs hs'
-    'ms ms';
-  grid-gap: 5px;
-  padding-left: 2px;
-  padding-right: 2px;
-  margin: auto;
+    'hl hl '
+    'th ts'
+    'mh ms';
+  grid-row-gap: 0.2rem;
+  grid-gap: 0.5rem;
+  padding-left: 0.2rem;
+  padding-right:0.2rem;
+  margin: 0.2rem;
   border: 1px solid grey;
-  width: 100%;
-  height: 100%;
 }
-
 .box {
+  background-color: #444;
+  border: 1px solid black;
 }
 
-#hsum {
-  grid-area: hs;
+#headLine {
+  grid-area: hl;
 }
 
-#maxSum {
+#footer {
+  grid-area: ft;
+}
+
+#totalScoreHeader {
+  grid-area: th;
+}
+
+#totalScore{
+  grid-area: ts;
+}
+
+#maxScoreHeader{
+  grid-area: mh
+}
+
+#maxScore {
   grid-area: ms;
 }
