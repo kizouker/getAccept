@@ -9,7 +9,7 @@
   grid-row-gap: 0.2rem;
   grid-gap: 0.5rem;
   padding-left: 0.2rem;
-  padding-right:0.2rem;
+  padding-right: 0.2rem;
   margin: 0.2rem;
   border: 1px solid grey;
 }
@@ -30,12 +30,12 @@
   grid-area: th;
 }
 
-#totalScore{
+#totalScore {
   grid-area: ts;
 }
 
-#maxScoreHeader{
-  grid-area: mh
+#maxScoreHeader {
+  grid-area: mh;
 }
 
 #maxScore {

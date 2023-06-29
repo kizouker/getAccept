@@ -10,7 +10,7 @@ const Score = () => {
   useEffect(() => {
     async function fetchDataAsync() {
       const resolvedData = await calcOnServer(frames);
-      console.log('resolveddata', resolvedData);
+      // console.log('resolveddata', resolvedData);
       setData(resolvedData);
     }
     fetchDataAsync();
@@ -19,7 +19,7 @@ const Score = () => {
   let totalScore = data ? data.totalScore : null;
   let maxScore = data ? data.maxScore : null;
 
-  console.log('totalScore: ', totalScore);
+  // console.log('totalScore: ', totalScore);
 
   return (
     <div className="score">

@@ -11,7 +11,7 @@ app.use(cors());
 app.post(ROUTE_POST_CALC_TOTALSCORE, (req, res) => {
   const frames = req.body.frames;
   const totalScore = calculateTotalScore(frames.frames);
-  console.log('server received frames ', frames.frames);
+  // console.log('server received frames ', frames.frames);
   res.json({
     totalScore: totalScore,
     message: 'Frames received successfully',

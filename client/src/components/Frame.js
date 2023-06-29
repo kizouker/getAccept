@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 
 const Frame = ({ frameIndex }) => {
   const frames = useSelector((state) => state.bowling.frames);
+  const framesScore = useSelector((state) => state.bowling.framesScore);
+  const currentFrameScore = framesScore[frameIndex];
   const currentFrame = frames[frameIndex];
   let roll1, roll2, roll3;
   roll1 = '-';
@@ -28,7 +30,7 @@ const Frame = ({ frameIndex }) => {
   }
 
   return (
-    <div className="frame">
+    <div className="frameGrid">
       <div className="box" id="frame">
         {frameIndex + 1}
       </div>
@@ -44,7 +46,7 @@ const Frame = ({ frameIndex }) => {
         </div>
       )}
       <div className="box" id="frameScore">
-        frameScore
+        {currentFrameScore}
       </div>
     </div>
   );

@@ -10,7 +10,6 @@ const BowlingGame = () => {
   return (
     <div>
       <PinsDown></PinsDown>
-
       <div className="frameContainer">
         {Array.from({ length: frames.length }).map((_, index) => (
           <Frame key={index} frameIndex={index}>
@@ -22,4 +21,5 @@ const BowlingGame = () => {
     </div>
   );
 };
+
 export default BowlingGame;

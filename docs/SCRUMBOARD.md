@@ -82,11 +82,46 @@ DONE
 ### Frontend/client  
 * CSS
 - Priority: B - nice to have
+  - go through the css for:
+     - App,
+     - index
+     - Frame
+     etc, check with chatgpt and udacity course if grid-template is correctly implmented/used
+  - make responsive
+
+  - make an alternative implementation using a table for the frames 
+  - use a react library for this and evaluate pros/cons
+
+ 
   - fix body css
   - fix footer css
-  * Estimate: 8 hours or infinite
-  
+ 
+ - Frame.js
+  - refactor all if-statements using modern javascript js2020+ to make it compact
+  - re-use functions from back and front end to test strike/spare
+
+  - Score
+  rename div - containe2
+
+  - PinsDown
+  - optimize if-statements
+
+### tools
+* configure prettier to be less picky
+
+### Misc
+* convert to typescript
+### middleware
+## where to put constants.js
+
 ### Backend/server
 - use more headers (cors, etc)
 - Priority: B - nice to have
-       
+* Redesign communication front-end to backend,
+ - only send one frame at a time
+ - let backend accumulate one frame at a time
+ - goal: decrease RT
+ - Today just starting up front and back, and clicking on the pins-down-selector makes 4 calls to the server, which it shouldn't
+- debug why this happens
+ - save the frameScore in redux state/store
+ ###
